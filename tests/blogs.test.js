@@ -4,7 +4,7 @@ let page;
 
 beforeEach(async () => {
   page = await Page.build();
-  await page.goto("localhost:3000");
+  await page.goto("http://localhost:3000");
 });
 
 afterEach(async () => {
@@ -59,7 +59,7 @@ describe("When logged in", async () => {
   });
 });
 
-describe("when user is not logged in", () => {
+describe("when user is not logged into the app", () => {
   const actions = [
     {
       method: "get",
